@@ -1,7 +1,9 @@
 ---
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -34,9 +36,7 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+		<Header />
 		<h1>Welcome to <span class="text-gradient">Astro</span>, my friend!</h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
@@ -64,7 +64,13 @@ import Card from '../components/Card.astro';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
+		<Footer />
+		<script>
+		  import "../scripts/menu"; 
+		</script>
+	  </body>
 	</main>
+	<Footer />
 </Layout>
 
 <style>
